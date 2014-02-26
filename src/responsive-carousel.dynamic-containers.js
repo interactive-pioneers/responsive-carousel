@@ -10,8 +10,8 @@
 	
 	var pluginName = "carousel",
 		initSelector = "." + pluginName,
-		itemClass = pluginName + "-item",
-		activeClass = pluginName + "-active",
+		itemClass = pluginName + "__item",
+		activeClass = pluginName + "--active",
 		rowAttr = "data-" + pluginName + "-slide",
 		$win = $( window ),
 		dynamicContainers = {
@@ -20,7 +20,7 @@
 					$rows = $self.find( "[" + rowAttr + "]" ),
 					$activeItem = $rows.filter( "." + activeClass ).children( 0 ),
 					$kids = $rows.children(),
-					$nav = $self.find( "." + pluginName + "-nav" ),
+					$nav = $self.find( "." + pluginName + "__nav" ),
 					sets = [];
 				
 				if( !$rows.length ){

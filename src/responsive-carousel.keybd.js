@@ -9,7 +9,7 @@
 (function($) {
 	var pluginName = "carousel",
 		initSelector = "." + pluginName,
-		navSelector = "." + pluginName + "-nav a",
+		navSelector = "." + pluginName + "__nav a",
 		buffer,
 		keyNav = function( e ) {
 			clearTimeout( buffer );

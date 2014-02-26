@@ -5,7 +5,7 @@
  * Copyright (c) 2012 Filament Group, Inc.
  * Licensed under the MIT, GPL licenses.
 */
-.carousel-flip {
+.carousel--flip {
 	position: relative;
 	overflow: visible;
 	-webkit-transform: translate3d(0, 0, 0);
@@ -19,12 +19,12 @@
 	-o-perspective: 800;
 	perspective: 800;
 }
-.carousel-flip .carousel-item {
+.carousel--flip .carousel__item {
 	position: absolute;
 	top: 0;
 	width: 100%; /* necessary for non-active slides */
 	display: block; /* overrides basic carousel styles */
-	z-index: 1;
+	z__item--index: 1;
 	opacity: 0;
 	-webkit-transition: -webkit-transform .2s ease;
 	-moz-transition: -moz-transform .2s ease;
@@ -42,32 +42,32 @@
 	-o-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
-.carousel-no-transition .carousel-item {
+.carousel--no-transition .carousel__item {
 	-webkit-transition: none;
 	-moz-transition: none;
 	-ms-transition: none;
 	-o-transition: none;
 	transition: none;
 }
-.carousel-flip .carousel-active {
+.carousel--flip .carousel--active {
 	-webkit-transform: rotateY(0deg);
 	-moz-transform: rotateY(0deg);
 	-ms-transform: rotateY(0deg);
 	-o-transform: rotateY(0deg);
 	-transform: rotateY(0deg);
 	position: relative;
-	z-index: 2;
+	z__item--index: 2;
 	opacity: 1;	
 }
-.carousel-flip .carousel-out,
-.carousel-flip-reverse .carousel-item {
+.carousel--flip .carousel__item--out,
+.carousel--flip-reverse .carousel__item {
 	-webkit-transform: rotateY(-180deg);
 	-moz-transform: rotateY(-180deg);
 	-ms-transform: rotateY(-180deg);
 	-o-transform: rotateY(-180deg);
 	-transform: rotateY(-180deg);
 }
-.carousel-flip .carousel-in {
+.carousel--flip .carousel__item--in {
 	-webkit-transform: rotateY(0deg);
 	-moz-transform: rotateY(0deg);
 	-ms-transform: rotateY(0deg);
@@ -75,11 +75,11 @@
 	-transform: rotateY(0deg);
 	opacity: 1;
 }
-.carousel-flip .carousel-top {
-	z-index: 3;
+.carousel--flip .carousel__item--top {
+	z__item--index: 3;
 	opacity: 1;
 }
-.carousel-flip-reverse .carousel-out {
+.carousel--flip-reverse .carousel__item--out {
 	-webkit-transform: rotateY(180deg);
 	-moz-transform: rotateY(180deg);
 	-ms-transform: rotateY(180deg);
@@ -87,7 +87,7 @@
 	-transform: rotateY(180deg);
 	
 }
-.carousel-flip-reverse .carousel-in {
+.carousel--flip-reverse .carousel__item--in {
 	-webkit-transform: rotateY(0deg);
 	-moz-transform: rotateY(0deg);
 	-ms-transform: rotateY(0deg);

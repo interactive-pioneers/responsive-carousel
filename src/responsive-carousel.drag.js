@@ -10,13 +10,13 @@
 	
 	var pluginName = "carousel",
 		initSelector = "." + pluginName,
-		activeClass = pluginName + "-active",
-		itemClass = pluginName + "-item",
+		activeClass = pluginName + "--active",
+		itemClass = pluginName + "__item",
 		dragThreshold = function( deltaX ){
 			return Math.abs( deltaX ) > 4;
 		},
 		getActiveSlides = function( $carousel, deltaX ){
-			var $from = $carousel.find( "." + pluginName + "-active" ),
+			var $from = $carousel.find( "." + pluginName + "--active" ),
 				activeNum = $from.prevAll().length + 1,
 				forward = deltaX < 0,
 				nextNum = activeNum + (forward ? 1 : -1),

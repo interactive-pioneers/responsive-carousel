@@ -9,12 +9,12 @@
 (function( $, undefined ) {
 	var pluginName = "carousel",
 		initSelector = "." + pluginName + "[data-paginate]",
-		paginationClass = pluginName + "-pagination",
-		activeClass = pluginName + "-active-page",
+		paginationClass = pluginName + "___pagination",
+		activeClass = pluginName + "__pagination--active",
 		paginationMethods = {
 			_createPagination: function(){
-				var nav = $( this ).find( "." + pluginName + "-nav" ),
-					items = $( this ).find( "." + pluginName + "-item" ),
+				var nav = $( this ).find( "." + pluginName + "__nav" ),
+					items = $( this ).find( "." + pluginName + "__item" ),
 					pNav = $( "<ol class='" + paginationClass + "'></ol>" ),
 					num, thumb, content;
 
@@ -32,11 +32,11 @@
 				});
 
 				if( thumb ){
-					pNav.addClass( pluginName + "-nav-thumbs" );
+					pNav.addClass( pluginName + "__nav--thumbs" );
 				}
 
 				nav
-					.addClass( pluginName + "-nav-paginated" )
+					.addClass( pluginName + "__nav--paginated" )
 					.find( "a" ).first().after( pNav );
 			},
 			_bindPaginationEvents: function(){

@@ -12,13 +12,13 @@
 		initSelector = "." + pluginName,
 		transitionAttr = "data-transition",
 		transitioningClass = pluginName + "-transitioning",
-		itemClass = pluginName + "-item",
-		activeClass = pluginName + "-active",
-		prevClass = pluginName + "-item-prev",
-		nextClass = pluginName + "-item-next",
-		inClass = pluginName + "-in",
-		outClass = pluginName + "-out",
-		navClass =  pluginName + "-nav",
+		itemClass = pluginName + "__item",
+		activeClass = pluginName + "--active",
+		prevClass = pluginName + "__item--prev",
+		nextClass = pluginName + "__item--next",
+		inClass = pluginName + "__item--in",
+		outClass = pluginName + "__item--out",
+		navClass =  pluginName + "__nav",
 		prototype,
 		cssTransitionsSupport = (function(){
 			var prefixes = "webkit Moz O Ms".split( " " ),
@@ -54,7 +54,7 @@
 				$( this )
 					.addClass(
 						pluginName +
-						" " + ( trans ? pluginName + "-" + trans : "" ) + " "
+						" " + ( trans ? pluginName + "--" + trans : "" ) + " "
 					)
 					.children()
 					.addClass( itemClass )
@@ -95,7 +95,7 @@
 
 				var $self = $(this),
 					trans = $self.attr( transitionAttr ),
-					reverseClass = " " + pluginName + "-" + trans + "-reverse";
+					reverseClass = " " + pluginName + "--" + trans + "-reverse";
 
 				// clean up children
 				$( this ).find( "." + itemClass ).removeClass( [ outClass, inClass, reverseClass ].join( " " ) );
@@ -177,8 +177,8 @@
 				var $nav, $this = $( this ), $items, $active;
 
 				$nav = $("<nav class='"+ navClass +"'>" +
-					"<a href='#prev' class='prev' aria-hidden='true' title='Previous'>Prev</a>" +
-					"<a href='#next' class='next' aria-hidden='true' title='Next'>Next</a>" +
+					"<a href='#prev' class='carousel__nav__prev' aria-hidden='true' title='Previous'>Prev</a>" +
+					"<a href='#next' class='carousel__nav__next' aria-hidden='true' title='Next'>Next</a>" +
 					"</nav>");
 
 				$this.trigger( "beforecreatenav." + pluginName, { $nav: $nav });

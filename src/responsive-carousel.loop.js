@@ -1,7 +1,7 @@
 (function($) {
 	var pluginName = "carousel",
-			itemClass = pluginName + "-item",
-			activeClass = pluginName + "-active",
+			itemClass = pluginName + "__item",
+			activeClass = pluginName + "--active",
 			isLooped = function( $element ) {
 				return $element.attr( "data-loop" ) !== "false";
 			};
@@ -47,16 +47,16 @@
 			}
 
 			if( newIndex === items.length - 1 ){
-				$this[pluginName]( '_disableNav', 'next' );
+				$this[pluginName]( '_disableNav', 'carousel__nav__next' );
 			}
 
 			if( newIndex === 0 ){
-				$this[pluginName]( '_disableNav', 'prev' );
+				$this[pluginName]( '_disableNav', 'carousel__nav__prev' );
 			}
 
 			if( newIndex > 0 && newIndex < items.length - 1 ) {
-				$this[pluginName]( '_enableNav', 'next' );
-				$this[pluginName]( '_enableNav', 'prev' );
+				$this[pluginName]( '_enableNav', 'carousel__nav__next' );
+				$this[pluginName]( '_enableNav', 'carousel__nav__prev' );
 			}
 		},
 
@@ -72,11 +72,11 @@
 
 			// if this is not a looped carousel enable and disable nav appropriately
 			if( $active[0] === $items[0]) {
-				$this[pluginName]( '_disableNav', 'prev', data.$nav );
+				$this[pluginName]( '_disableNav', 'carousel__nav__prev', data.$nav );
 			}
 
 			if( $active.last()[0] === $items.last()[0]) {
-				$this[pluginName]( '_disableNav', 'next', data.$nav );
+				$this[pluginName]( '_disableNav', 'carousel__nav__next', data.$nav );
 			}
 		},
 

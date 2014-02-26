@@ -10,14 +10,14 @@
 	
 	var pluginName = "carousel",
 		initSelector = "." + pluginName,
-		activeClass = pluginName + "-active",
-		topClass = pluginName + "-top",
-		itemClass = pluginName + "-item",
+		activeClass = pluginName + "--active",
+		topClass = pluginName + "__item--top",
+		itemClass = pluginName + "__item",
 		dragThreshold = function( xPercent ){
 			return (xPercent > -1 && xPercent < 0) || (xPercent < 1 && xPercent > 0);
 		},
 		getActiveSlides = function( $carousel, deltaX ){
-			var $from = $carousel.find( "." + pluginName + "-active" ),
+			var $from = $carousel.find( "." + pluginName + "--active" ),
 				activeNum = $from.prevAll().length + 1,
 				forward = deltaX < 0,
 				nextNum = activeNum + (forward ? 1 : -1),

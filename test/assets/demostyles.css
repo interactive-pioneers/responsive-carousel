@@ -4,18 +4,18 @@
  font-family: sans-serif;
  position: relative;
 }
-.carousel-item img {
+.carousel__item img {
   width: 100%;
   height: auto;
   display: block;
 }
-.carousel-nav {
+.carousel__nav {
   position: absolute;
   bottom: 0;
   z-index: 4;
   width: 100%;
 }
-.carousel-nav a {
+.carousel__nav a {
   text-decoration: none;
   font-size: .8em;
   background: #fff;
@@ -26,13 +26,13 @@
   bottom: 0;
   font-weight: bold;
 }
-.carousel-nav a.prev {
+.carousel__nav a.carousel__nav__prev {
   left: 0;
 }
-.carousel-nav a.next {
+.carousel__nav a.carousel__nav__next {
   right: 0;
 }
-.carousel-nav-paginated .carousel-active-page a {
+.carousel__nav--paginated .carousel-active-page a {
 	background: #333;
 	color: #fff;
 	opacity: .8;
@@ -40,11 +40,11 @@
 
 
 /* styled arrows */
-.arrows .carousel-nav {
+.arrows .carousel__nav {
   bottom: auto;
   top: 50%;
 }
-.arrows .carousel-nav a {
+.arrows .carousel__nav a {
   text-indent: -9999px;
   width: 2em;
   height: 2em;
@@ -55,26 +55,26 @@
   background-repeat: no-repeat;
   border-radius: 100%;
 }
-.arrows .carousel-nav a:hover,
-.arrows .carousel-nav a:focus {
+.arrows .carousel__nav a:hover,
+.arrows .carousel__nav a:focus {
   opacity: 1;
 }
-.arrows .carousel-nav a.next {
+.arrows .carousel__nav a.carousel__nav__next {
   background-image: url(arrow-right.png);
   right: 1em;
 }
-.arrows .carousel-nav a.prev {
+.arrows .carousel__nav a.carousel__nav__prev {
   background-image: url(arrow-left.png);
   left: 1em;
 }
 
 
-/* peek */
-.carousel.peek {
+/*.carousel--peek */
+.carousel.carousel--peek {
    max-width: 500px;
 }
-.carousel.peek .carousel-item-prev,
-.carousel.peek .carousel-item-next {
+.carousel.carousel--peek .carousel__item--prev,
+.carousel.carousel--peek .carousel__item--next {
   width: 50%;
   display: block;
   opacity: .5;
@@ -88,7 +88,7 @@
   -ms-transform: scale(.6) rotate(-15deg);
   transform: scale(.6) rotate(-15deg);
 }
-.carousel.peek .carousel-item-next {
+.carousel.carousel--peek .carousel__item--next {
   right: 0;
   left: auto;
   -webkit-transform: scale(.6) rotate(15deg);
@@ -97,21 +97,21 @@
   -ms-transform: scale(.6) rotate(15deg);
   transform: scale(.6) rotate(15deg);
 }
-.carousel.peek .carousel-active {
+.carousel.carousel--peek .carousel--active {
   width: 50%;
   opacity: 1;
   position: relative;
   left: 25%;
   z-index: 2;
-  box-shadow: .2em .2em .5em #aaa;
+ box-shadow: .2em .2em .5em #aaa;
 }
-.carousel.peek .carousel-nav {
+.carousel.carousel--peek .carousel__nav {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 3;
 }
-.carousel.peek .carousel-nav a {
+.carousel.carousel--peek .carousel__nav a {
   width: 20%;
   height: 100%;
   background: #fff;
@@ -120,7 +120,7 @@
   position: absolute;
   left: 0;
 }
-.carousel.peek .carousel-nav a.next {
+.carousel.carousel--peek .carousel__nav a.carousel__nav__next {
   left: auto;
   right: 0;
 }

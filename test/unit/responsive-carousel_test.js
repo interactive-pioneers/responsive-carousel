@@ -17,12 +17,12 @@
 	});
 
 	test( "prev disabled initially", function() {
-		ok( $carousel.find( "a.prev" ).is( ".disabled" ), "previous is disabled" );
+		ok( $carousel.find( "a.carousel__nav__prev" ).is( ".disabled" ), "previous is disabled" );
 	});
 
 	test( "next disabled when the last item is active", function() {
 		$carousel.carousel( "goTo", $items.length );
-		ok( $carousel.find( "a.next" ).is( ".disabled" ), "next is disabled" );
+		ok( $carousel.find( "a.carousel__nav__next" ).is( ".disabled" ), "next is disabled" );
 	});
 
 	test( "next using goto on the last item is prevented", function() {
@@ -41,23 +41,23 @@
 
 	test( "both are enabled when an inner item is active", function() {
 		$carousel.carousel( "goTo", $items.length - 1);
-		ok( !$carousel.find( "a.next" ).is( ".disabled" ), "next is enabled" );
-		ok( !$carousel.find( "a.prev" ).is( ".disabled" ), "prev is enabled" );
+		ok( !$carousel.find( "a.carousel__nav__next" ).is( ".disabled" ), "next is enabled" );
+		ok( !$carousel.find( "a.carousel__nav__prev" ).is( ".disabled" ), "prev is enabled" );
 	});
 
 	test( "nav is enabled when an inner item is active", function() {
 		$carousel = $( "[data-carousel]" ).carousel();
 		$carousel.carousel( "goTo", $items.length - 1);
 
-		ok( !$carousel.find( "a.next" ).is( ".disabled" ), "next is enabled" );
-		ok( !$carousel.find( "a.prev" ).is( ".disabled" ), "next is enabled" );
+		ok( !$carousel.find( "a.carousel__nav__next" ).is( ".disabled" ), "next is enabled" );
+		ok( !$carousel.find( "a.carousel__nav__prev" ).is( ".disabled" ), "next is enabled" );
 	});
 
 	module( "core", {setup: setup});
 
-	test( "child-items have carousel-item class", function() {
+	test( "child-items have carousel__item class", function() {
 		$items.each(function(i, item) {
-			ok( $(item).is(".carousel-item") );
+			ok( $(item).is(".carousel__item") );
 		});
 	});
 
